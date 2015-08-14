@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E8054E59697CF60D1623FD1 /* libPods-Timeline.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F8959E2E0F623ED73FA918 /* libPods-Timeline.a */; };
+		DA055A071B7E6C9100894534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055A061B7E6C9100894534 /* AppDelegate.swift */; };
+		DA055A0C1B7E6C9100894534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA055A0A1B7E6C9100894534 /* Main.storyboard */; };
+		DA055A0E1B7E6C9100894534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA055A0D1B7E6C9100894534 /* Assets.xcassets */; };
+		DA055A111B7E6C9100894534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA055A0F1B7E6C9100894534 /* LaunchScreen.storyboard */; };
+		DA055A1C1B7E6C9200894534 /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055A1B1B7E6C9200894534 /* TimelineTests.swift */; };
+		DA055A271B7E6C9200894534 /* TimelineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055A261B7E6C9200894534 /* TimelineUITests.swift */; };
+		DA055A391B7E6DFA00894534 /* SwiftySideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA055A361B7E6DFA00894534 /* SwiftySideMenuViewController.m */; };
+		DA055A411B7E72E600894534 /* UIViewController+SwiftySideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA055A401B7E72E600894534 /* UIViewController+SwiftySideMenu.m */; };
+		DA055A431B7E77A900894534 /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055A421B7E77A900894534 /* OptionsTableViewController.swift */; };
+		DA055A451B7E786B00894534 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055A441B7E786B00894534 /* TimelineViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA055A181B7E6C9200894534 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA0559FB1B7E6C9100894534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA055A021B7E6C9100894534;
+			remoteInfo = Timeline;
+		};
+		DA055A231B7E6C9200894534 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA0559FB1B7E6C9100894534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA055A021B7E6C9100894534;
+			remoteInfo = Timeline;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24F8959E2E0F623ED73FA918 /* libPods-Timeline.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Timeline.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BF2B190AF26D43FA70A3F5 /* Pods-Timeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timeline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Timeline/Pods-Timeline.debug.xcconfig"; sourceTree = "<group>"; };
+		A40D9EC0576AC9A75B0A22F9 /* Pods-Timeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Timeline.release.xcconfig"; path = "Pods/Target Support Files/Pods-Timeline/Pods-Timeline.release.xcconfig"; sourceTree = "<group>"; };
+		DA055A031B7E6C9100894534 /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA055A061B7E6C9100894534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA055A0B1B7E6C9100894534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA055A0D1B7E6C9100894534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA055A101B7E6C9100894534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA055A121B7E6C9100894534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA055A171B7E6C9200894534 /* TimelineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA055A1B1B7E6C9200894534 /* TimelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTests.swift; sourceTree = "<group>"; };
+		DA055A1D1B7E6C9200894534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA055A221B7E6C9200894534 /* TimelineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA055A261B7E6C9200894534 /* TimelineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineUITests.swift; sourceTree = "<group>"; };
+		DA055A281B7E6C9200894534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA055A351B7E6DFA00894534 /* SwiftySideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftySideMenuViewController.h; sourceTree = "<group>"; };
+		DA055A361B7E6DFA00894534 /* SwiftySideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftySideMenuViewController.m; sourceTree = "<group>"; };
+		DA055A3F1B7E72E600894534 /* UIViewController+SwiftySideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwiftySideMenu.h"; sourceTree = "<group>"; };
+		DA055A401B7E72E600894534 /* UIViewController+SwiftySideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwiftySideMenu.m"; sourceTree = "<group>"; };
+		DA055A421B7E77A900894534 /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
+		DA055A441B7E786B00894534 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		DA055A461B7E7A8300894534 /* Timeline-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Timeline-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA055A001B7E6C9100894534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E8054E59697CF60D1623FD1 /* libPods-Timeline.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA055A141B7E6C9200894534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA055A1F1B7E6C9200894534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D2B98445FFACEEAC00BBF97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50BF2B190AF26D43FA70A3F5 /* Pods-Timeline.debug.xcconfig */,
+				A40D9EC0576AC9A75B0A22F9 /* Pods-Timeline.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9821EDE65E3517653B4FE816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24F8959E2E0F623ED73FA918 /* libPods-Timeline.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA0559FA1B7E6C9100894534 = {
+			isa = PBXGroup;
+			children = (
+				DA055A461B7E7A8300894534 /* Timeline-Bridging-Header.h */,
+				DA055A051B7E6C9100894534 /* Timeline */,
+				DA055A1A1B7E6C9200894534 /* TimelineTests */,
+				DA055A251B7E6C9200894534 /* TimelineUITests */,
+				DA055A041B7E6C9100894534 /* Products */,
+				4D2B98445FFACEEAC00BBF97 /* Pods */,
+				9821EDE65E3517653B4FE816 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA055A041B7E6C9100894534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA055A031B7E6C9100894534 /* Timeline.app */,
+				DA055A171B7E6C9200894534 /* TimelineTests.xctest */,
+				DA055A221B7E6C9200894534 /* TimelineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA055A051B7E6C9100894534 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				DA055A341B7E6DFA00894534 /* SwiftySideMenu */,
+				DA055A061B7E6C9100894534 /* AppDelegate.swift */,
+				DA055A0A1B7E6C9100894534 /* Main.storyboard */,
+				DA055A0D1B7E6C9100894534 /* Assets.xcassets */,
+				DA055A0F1B7E6C9100894534 /* LaunchScreen.storyboard */,
+				DA055A121B7E6C9100894534 /* Info.plist */,
+				DA055A421B7E77A900894534 /* OptionsTableViewController.swift */,
+				DA055A441B7E786B00894534 /* TimelineViewController.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		DA055A1A1B7E6C9200894534 /* TimelineTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA055A1B1B7E6C9200894534 /* TimelineTests.swift */,
+				DA055A1D1B7E6C9200894534 /* Info.plist */,
+			);
+			path = TimelineTests;
+			sourceTree = "<group>";
+		};
+		DA055A251B7E6C9200894534 /* TimelineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA055A261B7E6C9200894534 /* TimelineUITests.swift */,
+				DA055A281B7E6C9200894534 /* Info.plist */,
+			);
+			path = TimelineUITests;
+			sourceTree = "<group>";
+		};
+		DA055A341B7E6DFA00894534 /* SwiftySideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DA055A351B7E6DFA00894534 /* SwiftySideMenuViewController.h */,
+				DA055A361B7E6DFA00894534 /* SwiftySideMenuViewController.m */,
+				DA055A3F1B7E72E600894534 /* UIViewController+SwiftySideMenu.h */,
+				DA055A401B7E72E600894534 /* UIViewController+SwiftySideMenu.m */,
+			);
+			name = SwiftySideMenu;
+			path = ../../../SwiftySideMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA055A021B7E6C9100894534 /* Timeline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA055A2B1B7E6C9200894534 /* Build configuration list for PBXNativeTarget "Timeline" */;
+			buildPhases = (
+				088895821A2D9ABE61E2B79B /* Check Pods Manifest.lock */,
+				DA0559FF1B7E6C9100894534 /* Sources */,
+				DA055A001B7E6C9100894534 /* Frameworks */,
+				DA055A011B7E6C9100894534 /* Resources */,
+				167EE4DD89560E621D2F9BE5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Timeline;
+			productName = Timeline;
+			productReference = DA055A031B7E6C9100894534 /* Timeline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA055A161B7E6C9200894534 /* TimelineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA055A2E1B7E6C9200894534 /* Build configuration list for PBXNativeTarget "TimelineTests" */;
+			buildPhases = (
+				DA055A131B7E6C9200894534 /* Sources */,
+				DA055A141B7E6C9200894534 /* Frameworks */,
+				DA055A151B7E6C9200894534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA055A191B7E6C9200894534 /* PBXTargetDependency */,
+			);
+			name = TimelineTests;
+			productName = TimelineTests;
+			productReference = DA055A171B7E6C9200894534 /* TimelineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA055A211B7E6C9200894534 /* TimelineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA055A311B7E6C9200894534 /* Build configuration list for PBXNativeTarget "TimelineUITests" */;
+			buildPhases = (
+				DA055A1E1B7E6C9200894534 /* Sources */,
+				DA055A1F1B7E6C9200894534 /* Frameworks */,
+				DA055A201B7E6C9200894534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA055A241B7E6C9200894534 /* PBXTargetDependency */,
+			);
+			name = TimelineUITests;
+			productName = TimelineUITests;
+			productReference = DA055A221B7E6C9200894534 /* TimelineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA0559FB1B7E6C9100894534 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Hossam Ghareeb";
+				TargetAttributes = {
+					DA055A021B7E6C9100894534 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					DA055A161B7E6C9200894534 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = DA055A021B7E6C9100894534;
+					};
+					DA055A211B7E6C9200894534 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = DA055A021B7E6C9100894534;
+					};
+				};
+			};
+			buildConfigurationList = DA0559FE1B7E6C9100894534 /* Build configuration list for PBXProject "Timeline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA0559FA1B7E6C9100894534;
+			productRefGroup = DA055A041B7E6C9100894534 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA055A021B7E6C9100894534 /* Timeline */,
+				DA055A161B7E6C9200894534 /* TimelineTests */,
+				DA055A211B7E6C9200894534 /* TimelineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA055A011B7E6C9100894534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA055A111B7E6C9100894534 /* LaunchScreen.storyboard in Resources */,
+				DA055A0E1B7E6C9100894534 /* Assets.xcassets in Resources */,
+				DA055A0C1B7E6C9100894534 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA055A151B7E6C9200894534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA055A201B7E6C9200894534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		088895821A2D9ABE61E2B79B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		167EE4DD89560E621D2F9BE5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Timeline/Pods-Timeline-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA0559FF1B7E6C9100894534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA055A431B7E77A900894534 /* OptionsTableViewController.swift in Sources */,
+				DA055A411B7E72E600894534 /* UIViewController+SwiftySideMenu.m in Sources */,
+				DA055A391B7E6DFA00894534 /* SwiftySideMenuViewController.m in Sources */,
+				DA055A071B7E6C9100894534 /* AppDelegate.swift in Sources */,
+				DA055A451B7E786B00894534 /* TimelineViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA055A131B7E6C9200894534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA055A1C1B7E6C9200894534 /* TimelineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA055A1E1B7E6C9200894534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA055A271B7E6C9200894534 /* TimelineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA055A191B7E6C9200894534 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA055A021B7E6C9100894534 /* Timeline */;
+			targetProxy = DA055A181B7E6C9200894534 /* PBXContainerItemProxy */;
+		};
+		DA055A241B7E6C9200894534 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA055A021B7E6C9100894534 /* Timeline */;
+			targetProxy = DA055A231B7E6C9200894534 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA055A0A1B7E6C9100894534 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA055A0B1B7E6C9100894534 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA055A0F1B7E6C9100894534 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA055A101B7E6C9100894534 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA055A291B7E6C9200894534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA055A2A1B7E6C9200894534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA055A2C1B7E6C9200894534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50BF2B190AF26D43FA70A3F5 /* Pods-Timeline.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Timeline/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hossam.Timeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Timeline-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		DA055A2D1B7E6C9200894534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A40D9EC0576AC9A75B0A22F9 /* Pods-Timeline.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Timeline/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hossam.Timeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Timeline-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		DA055A2F1B7E6C9200894534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimelineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hossam.TimelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timeline.app/Timeline";
+			};
+			name = Debug;
+		};
+		DA055A301B7E6C9200894534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TimelineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hossam.TimelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timeline.app/Timeline";
+			};
+			name = Release;
+		};
+		DA055A321B7E6C9200894534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TimelineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hossam.TimelineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Timeline;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DA055A331B7E6C9200894534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TimelineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hossam.TimelineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Timeline;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA0559FE1B7E6C9100894534 /* Build configuration list for PBXProject "Timeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA055A291B7E6C9200894534 /* Debug */,
+				DA055A2A1B7E6C9200894534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA055A2B1B7E6C9200894534 /* Build configuration list for PBXNativeTarget "Timeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA055A2C1B7E6C9200894534 /* Debug */,
+				DA055A2D1B7E6C9200894534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA055A2E1B7E6C9200894534 /* Build configuration list for PBXNativeTarget "TimelineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA055A2F1B7E6C9200894534 /* Debug */,
+				DA055A301B7E6C9200894534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA055A311B7E6C9200894534 /* Build configuration list for PBXNativeTarget "TimelineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA055A321B7E6C9200894534 /* Debug */,
+				DA055A331B7E6C9200894534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA0559FB1B7E6C9100894534 /* Project object */;
+}
