@@ -41,6 +41,15 @@ typedef enum {
     */
 @property (nonatomic, assign) float centerEndScale;
 
+/*!
+ * @brief enable or disable the left swipe gesture. The left swipe gesture will toggle the side menu if the left side is opened. Default value is YES
+ */
+@property (nonatomic, assign) BOOL enableLeftSwipeGesture;
+
+/*!
+ * @brief enable or disable the right swipe gesture. The right swipe gesture will toggle the side menu if the left side is NOT opened. Default value is YES
+ */
+@property (nonatomic, assign) BOOL enableRightSwipeGesture;
 
 /*!
 * @discussion toggle the left side menu. If its opened it will be closed and vice versa.

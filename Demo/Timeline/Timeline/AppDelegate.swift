@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootVC.leftViewController = leftVC;
         rootVC.centerEndScale = 0.4;
         
+        rootVC.enableLeftSwipeGesture = false
+        rootVC.enableRightSwipeGesture = false
+        
         return true
     }
 

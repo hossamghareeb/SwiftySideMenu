@@ -24,6 +24,9 @@
 @property (nonatomic) CGFloat centerPopAnimationProgress;
 @property (nonatomic) CGFloat leftPopAnimationProgress;
 
+@property (nonatomic, strong) UISwipeGestureRecognizer *leftSwipeGesture;
+@property (nonatomic, strong) UISwipeGestureRecognizer *rightSwipeGesture;
+
 @end
 
 @implementation SwiftySideMenuViewController
@@ -40,8 +43,57 @@
         //The default value of scaling center view.
         self.centerEndScale = 0.6;
         
+        self.enableLeftSwipeGesture = YES;
+        self.enableRightSwipeGesture = YES;
     }
     return self;
+}
+
+
+#pragma mark - Swipe Gestures -
+
+-(void)setEnableLeftSwipeGesture:(BOOL)enableLeftSwipeGesture{
+    if (enableLeftSwipeGesture) {
+        [self addLeftSwipeGesture];
+    }
+    else{
+        if (self.leftSwipeGesture) {
+            [self.view removeGestureRecognizer:self.leftSwipeGesture];
+        }
+        
+    }
+    
+    _enableLeftSwipeGesture = enableLeftSwipeGesture;
+}
+-(void)setEnableRightSwipeGesture:(BOOL)enableRightSwipeGesture{
+    if (enableRightSwipeGesture) {
+        [self addRightSwipeGesture];
+    }
+    else{
+        if (self.rightSwipeGesture) {
+            [self.view removeGestureRecognizer:self.rightSwipeGesture];
+        }
+    }
+    
+    _enableRightSwipeGesture = enableRightSwipeGesture;
+}
+
+-(void)addLeftSwipeGesture{
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipeGesture.delegate = self;
+    [self.view addGestureRecognizer:swipeGesture];
+    self.leftSwipeGesture = swipeGesture;
+}
+
+-(void)addRightSwipeGesture{
+    
+    
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    swipeGesture.delegate = self;
+    [self.view addGestureRecognizer:swipeGesture];
+    self.rightSwipeGesture = swipeGesture;
 }
 
 -(void)didSwipeLeft:(UISwipeGestureRecognizer *)gesture{
@@ -56,6 +108,8 @@
     }
 }
 
+#pragma mark - Left & Center Views -
+
 -(void)setLeftViewController:(UIViewController *)leftVC{
     
     if ([leftVC isEqual:self.leftViewController]) {
@@ -68,17 +122,6 @@
     }
     
     _leftViewController = leftVC;
-    
-    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
-    swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
-    swipeGesture.delegate = self;
-    [self.view addGestureRecognizer:swipeGesture];
-    
-    UISwipeGestureRecognizer *swipeGesture2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
-    swipeGesture2.direction = UISwipeGestureRecognizerDirectionRight;
-        swipeGesture2.delegate = self;
-    [self.view addGestureRecognizer:swipeGesture2];
-    
     
     _leftViewController.swiftySideMenu = self;
     [self.view insertSubview:_leftViewController.view belowSubview:self.centerViewController.view];
@@ -228,7 +271,7 @@ static inline CGFloat POPPixelsToPoints(CGFloat pixels) {
     
 }
 
-#pragma mark - Gestures -
+#pragma mark - UIGestureDelegate -
 
 // called when the recognition of one of gestureRecognizer or otherGestureRecognizer would be blocked by the other
 // return YES to allow both to recognize simultaneously. the default implementation returns NO (by default no two gestures can be recognized simultaneously)
