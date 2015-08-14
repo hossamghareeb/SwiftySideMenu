@@ -15,7 +15,7 @@
 #define kPopAnimationProgressLeftKey @"popAnimationProgressLeft"
 
 
-@interface SwiftySideMenuViewController ()<POPAnimationDelegate>
+@interface SwiftySideMenuViewController ()<POPAnimationDelegate, UIGestureRecognizerDelegate>
 {
     BOOL toggled; // used for triggering the left view
 }
@@ -45,7 +45,15 @@
 }
 
 -(void)didSwipeLeft:(UISwipeGestureRecognizer *)gesture{
-    [self toggleSideMenu];
+    if ([self isLeftMenuOpened]) {
+        [self toggleSideMenu];
+    }
+    
+}
+-(void)didSwipeRight:(UISwipeGestureRecognizer *)gesture{
+    if (![self isLeftMenuOpened]) {
+        [self toggleSideMenu];
+    }
 }
 
 -(void)setLeftViewController:(UIViewController *)leftVC{
@@ -60,6 +68,18 @@
     }
     
     _leftViewController = leftVC;
+    
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipeGesture.delegate = self;
+    [self.view addGestureRecognizer:swipeGesture];
+    
+    UISwipeGestureRecognizer *swipeGesture2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)];
+    swipeGesture2.direction = UISwipeGestureRecognizerDirectionRight;
+        swipeGesture2.delegate = self;
+    [self.view addGestureRecognizer:swipeGesture2];
+    
+    
     _leftViewController.swiftySideMenu = self;
     [self.view insertSubview:_leftViewController.view belowSubview:self.centerViewController.view];
 
@@ -207,6 +227,31 @@ static inline CGFloat POPPixelsToPoints(CGFloat pixels) {
     
     
 }
+
+#pragma mark - Gestures -
+
+// called when the recognition of one of gestureRecognizer or otherGestureRecognizer would be blocked by the other
+// return YES to allow both to recognize simultaneously. the default implementation returns NO (by default no two gestures can be recognized simultaneously)
+//
+// note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+// called once per attempt to recognize, so failure requirements can be determined lazily and may be set up between recognizers across view hierarchies
+// return YES to set up a dynamic failure requirement between gestureRecognizer and otherGestureRecognizer
+//
+// note: returning YES is guaranteed to set up the failure requirement. returning NO does not guarantee that there will not be a failure requirement as the other gesture's counterpart delegate or subclass methods may return YES
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer NS_AVAILABLE_IOS(7_0)
+{
+    return NO;
+}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer NS_AVAILABLE_IOS(7_0)
+{
+    return NO;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
