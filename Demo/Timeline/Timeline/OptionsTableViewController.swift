@@ -36,6 +36,11 @@ class OptionsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.swiftySideMenu?.toggleSideMenu()
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

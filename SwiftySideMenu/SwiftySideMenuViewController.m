@@ -122,8 +122,7 @@
     }
     
     _leftViewController = leftVC;
-    
-    _leftViewController.swiftySideMenu = self;
+    [self addChildViewController:leftVC];
     [self.view insertSubview:_leftViewController.view belowSubview:self.centerViewController.view];
 
 }
@@ -140,9 +139,9 @@
         
         [_centerViewController.view removeFromSuperview];
     }
+    [self addChildViewController:centerVC];
     
     _centerViewController = centerVC;
-    _centerViewController.swiftySideMenu = self;
     [self.view addSubview:_centerViewController.view];
 }
 
