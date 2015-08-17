@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,5 +34,21 @@ class TimelineViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return 100;
+    }
+    
+    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
+        cell?.textLabel?.text = "Feed \(indexPath.row)"
+        return cell!
+        
+    }
 
 }

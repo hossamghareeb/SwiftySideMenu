@@ -31,23 +31,22 @@
 
 @implementation SwiftySideMenuViewController
 
+-(void)loadView{
+    [super loadView];
+    
+    //The default value of scaling center view.
+    self.centerEndScale = 0.6;
+    
+    self.enableLeftSwipeGesture = YES;
+    self.enableRightSwipeGesture = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
--(instancetype)init{
-    self = [super init];
-    if (self) {
-        
-        //The default value of scaling center view.
-        self.centerEndScale = 0.6;
-        
-        self.enableLeftSwipeGesture = YES;
-        self.enableRightSwipeGesture = YES;
-    }
-    return self;
-}
 
 
 #pragma mark - Swipe Gestures -

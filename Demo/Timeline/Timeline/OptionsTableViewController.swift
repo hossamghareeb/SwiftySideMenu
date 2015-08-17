@@ -39,7 +39,7 @@ class OptionsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        self.swiftySideMenu?.toggleSideMenu()
+//        self.swiftySideMenu?.toggleSideMenu()
     }
 
     /*

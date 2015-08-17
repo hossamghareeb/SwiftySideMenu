@@ -2,7 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xwq-yK-M0F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Swifty Side Menu View Controller-->
         <scene sceneID="8b7-cz-WuV">
@@ -31,15 +37,52 @@
                         <viewControllerLayoutGuide type="bottom" id="3cS-k8-rdW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uch-Gz-I63">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qQx-RV-Kny">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="4yG-Wa-tjJ" rowHeight="74" style="IBUITableViewCellStyleDefault" id="2Yd-Ap-0mL">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Yd-Ap-0mL" id="eDD-fR-Qjb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4yG-Wa-tjJ">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="73"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mAA-oB-9vi" id="bDx-Kl-N4H"/>
+                                    <outlet property="delegate" destination="mAA-oB-9vi" id="pCJ-iH-kWu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qQx-RV-Kny" firstAttribute="height" secondItem="uch-Gz-I63" secondAttribute="height" id="L1k-Y4-to1"/>
+                            <constraint firstItem="qQx-RV-Kny" firstAttribute="leading" secondItem="uch-Gz-I63" secondAttribute="leadingMargin" constant="-20" id="iBa-VY-cjL"/>
+                            <constraint firstItem="qQx-RV-Kny" firstAttribute="top" secondItem="gR1-C4-ONy" secondAttribute="bottom" id="oD2-Ja-MX4"/>
+                            <constraint firstItem="qQx-RV-Kny" firstAttribute="width" secondItem="uch-Gz-I63" secondAttribute="width" id="vub-4V-ynG"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="o0P-JI-NY3" appends="YES" id="cT2-i3-5RS"/>
                             <outletCollection property="gestureRecognizers" destination="tt6-Qg-0Zx" appends="YES" id="VqT-oY-MLt"/>
                         </connections>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="TimeLine" id="JSp-kg-k5M">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="Ahl-ho-x99">
                             <connections>
@@ -52,7 +95,7 @@
                 <swipeGestureRecognizer direction="right" id="o0P-JI-NY3"/>
                 <swipeGestureRecognizer direction="left" id="tt6-Qg-0Zx"/>
             </objects>
-            <point key="canvasLocation" x="2704.5" y="267"/>
+            <point key="canvasLocation" x="2704" y="267"/>
         </scene>
         <!--Options Table View Controller-->
         <scene sceneID="Ejv-PG-99W">
