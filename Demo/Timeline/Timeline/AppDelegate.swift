@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootVC.centerViewController = centerVC;
         rootVC.leftViewController = leftVC;
         rootVC.centerEndScale = 0.4;
+        rootVC.leftSpringAnimationSpeed = 20;
         
         return true
     }

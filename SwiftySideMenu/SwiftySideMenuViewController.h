@@ -41,6 +41,24 @@ typedef enum {
     */
 @property (nonatomic, assign) float centerEndScale;
 
+
+/*!
+ * @brief The effective bounciness for left view animation. Use in conjunction with 'leftSpringAnimationSpeed' to change animation effect. Default value is 8.0
+ */
+@property (nonatomic, assign) float leftSpringAnimationBounciness;
+/*!
+ * @brief The effective speed for left view animation. Use in conjunction with 'leftSpringAnimationBounciness' to change animation effect. Default value is 10.0
+ */
+@property (nonatomic, assign) float leftSpringAnimationSpeed;
+/*!
+ * @brief The effective bounciness for center view animation. Use in conjunction with 'centerSpringAnimationSpeed' to change animation effect. Default value is 5.0
+ */
+@property (nonatomic, assign) float centerSpringAnimationBounciness;
+/*!
+ * @brief The effective speed for center view animation. Use in conjunction with 'centerSpringAnimationBounciness' to change animation effect. Default value is 10.0
+ */
+@property (nonatomic, assign) float centerSpringAnimationSpeed;
+
 /*!
  * @brief enable or disable the left swipe gesture. The left swipe gesture will toggle the side menu if the left side is opened. Default value is YES
  */

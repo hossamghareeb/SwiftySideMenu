@@ -37,6 +37,11 @@
     //The default value of scaling center view.
     self.centerEndScale = 0.6;
     
+    self.centerSpringAnimationBounciness = 5;
+    self.centerSpringAnimationSpeed = 10;
+    self.leftSpringAnimationBounciness = 8;
+    self.leftSpringAnimationSpeed = 10;
+    
     self.enableLeftSwipeGesture = YES;
     self.enableRightSwipeGesture = YES;
 }
@@ -161,8 +166,8 @@
         animation = [POPSpringAnimation animation];
         animation.name = kPopAnimationCenterKey;
         animation.delegate = self;
-        animation.springBounciness = 5;
-        animation.springSpeed = 10;
+        animation.springBounciness = self.centerSpringAnimationBounciness;
+        animation.springSpeed = self.centerSpringAnimationSpeed;
         animation.property = [POPAnimatableProperty propertyWithName:kPopAnimationProgressCenterKey initializer:^(POPMutableAnimatableProperty *prop) {
             prop.readBlock = ^(UIViewController *obj, CGFloat values[]) {
                 values[0] = _centerPopAnimationProgress;
@@ -197,8 +202,8 @@
         animation = [POPSpringAnimation animation];
         animation.name = kPopAnimationLeftKey;
         animation.delegate = self;
-        animation.springBounciness = 8;
-        animation.springSpeed = 10;
+        animation.springBounciness = self.leftSpringAnimationBounciness;
+        animation.springSpeed = self.leftSpringAnimationSpeed;
         animation.property = [POPAnimatableProperty propertyWithName:kPopAnimationProgressLeftKey initializer:^(POPMutableAnimatableProperty *prop) {
             prop.readBlock = ^(UIViewController *obj, CGFloat values[]) {
                 values[0] = self.leftPopAnimationProgress;
