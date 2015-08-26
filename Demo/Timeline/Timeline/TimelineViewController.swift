@@ -23,7 +23,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
 
     @IBAction func toggleSideMenu(sender: AnyObject) {
-        self.navigationController?.swiftySideMenu?.toggleSideMenu()
+        self.swiftySideMenu?.toggleSideMenu()
     }
     /*
     // MARK: - Navigation
